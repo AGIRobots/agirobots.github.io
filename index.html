@@ -1,17 +1,51 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8">
-<title>GitHub Pages Sample</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <title>AGIRobots GitHub</title>
+        
+        <style>
+            .start { /*オープニングアニメーション*/
+                background:#ffffff;
+                position: fixed;
+                height: 100%;
+                width: 100%;
+                z-index: 5;
+            }
+            .start h1 {
+                text-align: center;
+                vertical-align: middle;
+                top: 0;
+                left: 0;
+                font-size: 100px;
+                z-index: 6;
+            }
+            @keyframes fadeIn {
+                0% {opacity: 0}
+                100% {opacity: 1}
+            }
+            h1 {
+                font-family: 'Courier New', Courier, monospace;
+            }
+        </style>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    </head>
+    <body>
+        <div class="start">
+            <h1 class="title">AGIRobots</h1>
+        </div>
+        <h1 class="title">AGIRobots</h1>
+        <p>Vue.jsの練習</p>
 
-<body>
-<main>
-  <h1>GitHub Pages サンプル作成</h1>
-</main>
-
-<script>
-console.log('GitHub Pages test');
-</script>
-</body>
+        <script>
+            $(function() {
+                setTimeout(function(){
+                    $('.start h1').fadeIn(1600);
+                },5000); //0.5秒後にロゴをフェードイン!
+                setTimeout(function(){
+                    $('.start').fadeOut(500);
+                },2500); //2.5秒後にロゴ含め真っ白背景をフェードアウト！
+            });
+        </script>
+    </body>
 </html>
