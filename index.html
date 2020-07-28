@@ -29,6 +29,16 @@
             }
         </style>
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script>
+            $(function() {
+                setTimeout(function(){
+                    $('.start h1').hide().fadeIn(2000);
+                },500); //0.5秒後にロゴをフェードイン!
+                setTimeout(function(){
+                    $('.start').fadeOut(500);
+                },3000); //2.5秒後にロゴ含め真っ白背景をフェードアウト！
+            });
+        </script>
     </head>
     <body>
         <!-- opening animation -->
@@ -41,15 +51,6 @@
         <p>Webページ製作練習</p>
         <a href="https://agirobots.com/"><p>本家URL</p></a>
 
-        <script>
-            $(function() {
-                setTimeout(function(){
-                    $('.start h1').hide().fadeIn(2000);
-                },500); //0.5秒後にロゴをフェードイン!
-                setTimeout(function(){
-                    $('.start').fadeOut(500);
-                },3000); //2.5秒後にロゴ含め真っ白背景をフェードアウト！
-            });
-        </script>
+        
     </body>
 </html>
